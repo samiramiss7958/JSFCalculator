@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Tiny Calculator</title>
+        <h:outputStylesheet library="css" name="myStyle.css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>TINY CALCULATOR</h3>
+            <p>Please enter two numbers and then choose the desired action:</p>
+            <br></br>
+
+              <h:panelGrid columns="2" style="margin: 0;">
+                <h:outputLabel for="parameter1" value="First Number:"/>
+                <h:inputText id="parameter1" value="#{jSFManagedBean.parameter1}" required="true" requiredMessage="false"/> 
+                <h:outputLabel for="parameter2" value="Second Number:"/>
+                <h:inputText id="parameter2" value="#{jSFManagedBean.parameter2}" required="true" requiredMessage="false"/>
+              </h:panelGrid>
+                <br></br>
+              <h:panelGrid columns="4" style="margin: 0;">
+                <h:commandButton action="#{jSFManagedBean.add}"  value="Add"/>
+                <h:commandButton action="#{jSFManagedBean.subtract}" value="Subtract"/>
+                <h:commandButton action="#{jSFManagedBean.multiply}" value="Multiply"/>
+                <h:commandButton action="#{jSFManagedBean.divide}" value="Divide"/> 
+              </h:panelGrid>
+                <br></br>
+                <h:outputLabel for="result" value="Result:"/> 
+                <h:outputText id="result" value="#{jSFManagedBean.result}"/>
+
+                
+        </h:form>
+        <br />
+    </h:body>
+</html>
+
